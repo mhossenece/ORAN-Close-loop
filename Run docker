@@ -1,6 +1,15 @@
+cd ~/cci-workspace/ml-data-pipeline/docker
+
+
+docker info
+------------> need permission
+sudo usermod -aG docker $USER
+newgrp docker
+now check: docker info
+
 How to run docker
 =================
 docker-compose -f docker-compose-msh.yaml up
 docker ps
-----------> kafka not running
+----------> kafka not running (this will just run kafka)
 docker-compose -f docker-compose-msh.yaml up -d kafka
