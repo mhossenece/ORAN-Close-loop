@@ -1,0 +1,6 @@
+How to run docker
+=================
+docker-compose -f docker-compose-msh.yaml up
+docker ps
+----------> kafka not running
+docker-compose -f docker-compose-msh.yaml up -d kafka
