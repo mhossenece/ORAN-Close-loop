@@ -1,2 +1,6 @@
 sudo lsof -i :2000
 
+Verify with tcpdump or wireshark
+To observe messages live, you can monitor SCTP/S1AP or GTP-U traffic:
+--------------------------------------------------------------------
+sudo tcpdump -i lo port 36412 or port 2152 -nn -X
