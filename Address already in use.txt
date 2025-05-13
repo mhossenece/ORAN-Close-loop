@@ -1,4 +1,7 @@
 sudo lsof -i :2000
+sudo lsof -i :2101
+sudo pkill -9 srsue
+sudo pkill -9 srsenb
 
 Verify with tcpdump or wireshark
 To observe messages live, you can monitor SCTP/S1AP or GTP-U traffic:
