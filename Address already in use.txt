@@ -3,7 +3,35 @@ sudo lsof -i :2101
 sudo pkill -9 srsue
 sudo pkill -9 srsenb
 
+pkill -f clearml_agent
+
+
 Verify with tcpdump or wireshark
 To observe messages live, you can monitor SCTP/S1AP or GTP-U traffic:
 --------------------------------------------------------------------
 sudo tcpdump -i lo port 36412 or port 2152 -nn -X
+
+
+Grep
+====================================================================
+ps aux | grep clearml-agent
+
+
+
+tail -f /tmp/.clearml_agent_daemon_outkfwfclay.txt
+
+
+Docker
+=======================================================================
+nearrtric@nearrtric-VirtualBox:~/cci-workspace/ml-data-pipeline/docker$ docker-compose -f docker-compose-msh.yaml down
+nearrtric@nearrtric-VirtualBox:~/cci-workspace/ml-data-pipeline/docker$ docker-compose -f docker-compose-msh.yaml up
+
+
+
+--------------------------|
+Clearml is not running    |
+--------------------------|
+<if mongodb issue>
+sudo nano /etc/hosts
+
+
